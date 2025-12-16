@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\דבורי\\לימודים\\יד\\ChineseSaleApi\\ChineseSaleApi\\ChineseSaleApi.csproj": {}
+    "C:\\Users\\User\\Documents\\דבורי\\לימודים\\יד\\Project_Angular-Api\\ChineseSaleApi\\ChineseSaleApi\\ChineseSaleApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\דבורי\\לימודים\\יד\\ChineseSaleApi\\ChineseSaleApi\\ChineseSaleApi.csproj": {
+    "C:\\Users\\User\\Documents\\דבורי\\לימודים\\יד\\Project_Angular-Api\\ChineseSaleApi\\ChineseSaleApi\\ChineseSaleApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\דבורי\\לימודים\\יד\\ChineseSaleApi\\ChineseSaleApi\\ChineseSaleApi.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\דבורי\\לימודים\\יד\\Project_Angular-Api\\ChineseSaleApi\\ChineseSaleApi\\ChineseSaleApi.csproj",
         "projectName": "ChineseSaleApi",
-        "projectPath": "C:\\Users\\User\\Documents\\דבורי\\לימודים\\יד\\ChineseSaleApi\\ChineseSaleApi\\ChineseSaleApi.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\דבורי\\לימודים\\יד\\Project_Angular-Api\\ChineseSaleApi\\ChineseSaleApi\\ChineseSaleApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\דבורי\\לימודים\\יד\\ChineseSaleApi\\ChineseSaleApi\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\דבורי\\לימודים\\יד\\Project_Angular-Api\\ChineseSaleApi\\ChineseSaleApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

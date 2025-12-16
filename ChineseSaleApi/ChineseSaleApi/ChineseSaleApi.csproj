@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,7 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Repositories\UserRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Dto\" />
+    <Folder Include="RepositoryInterfaces\" />
+    <Folder Include="ServiceInterfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Repositories\UserRepository.cs" />
   </ItemGroup>
 
 </Project>
