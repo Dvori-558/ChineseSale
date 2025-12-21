@@ -7,6 +7,7 @@ namespace ChineseSaleApi.Models
     {
         [Key]
         public int Id { get; set; }
+        public bool? IsWin { get; set; }=false;
         //Foreign Key
         [Required]
         [ForeignKey("User")]

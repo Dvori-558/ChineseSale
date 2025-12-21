@@ -7,7 +7,7 @@ namespace ChineseSaleApi.Models
     {
         [Key]
         public int Id { get; set; }
-        public int Quantity { get; set; }
+        public int Quantity { get; set; }= 1;
         //Foreign Key
         [Required]
         [ForeignKey("User")]

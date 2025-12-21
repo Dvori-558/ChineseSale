@@ -18,5 +18,6 @@ namespace ChineseSaleApi.Models
         [Required]
         public int LotteryId { get; set; }
         public Lottery? Lottery { get; set; }
+        public ICollection<PackageCart> PackageCarts { get; set; } = new List<PackageCart>();
     }
 }

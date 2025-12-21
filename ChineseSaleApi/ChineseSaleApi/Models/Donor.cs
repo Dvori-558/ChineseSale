@@ -22,10 +22,7 @@ namespace ChineseSaleApi.Models
         public string? CompanyIcon {  get; set; }
         public int CompanyAddressId { get; set; }
         public Address? CompanyAddress { get; set; }
-        public ICollection<Gift> Gifts { get; set; }
-
-
-
-
+        public ICollection<Gift> Gifts { get; set; } = new List<Gift>();
+        public ICollection<Lottery> Lotteries { get; set; }= new List<Lottery>();
     }
 }

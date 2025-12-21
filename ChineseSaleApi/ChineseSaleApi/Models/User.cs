@@ -25,11 +25,14 @@ namespace ChineseSaleApi.Models
 
         public bool IsAdmin { get; set; } = false;
 
-        public int AddressId { get; set; }
+        public int? AddressId { get; set; }
         public Address? Address { get; set; }
 
-        public ICollection<Gift>? WonGits { get; set; }
-        public ICollection<Gift>? InvitedGifts { get; set; }
+        public ICollection<CardCart> CardCarts { get; set; } = new List<CardCart>();
 
+        public ICollection<PackageCart> PackageCarts { get; set; } = new List<PackageCart>();
+        public ICollection<Card> Cards { get; set; } = new List<Card>(); 
+        //public ICollection<Gift>? WonGits { get; set; }
+        //public ICollection<Gift>? InvitedGifts { get; set; }
     }
 }
