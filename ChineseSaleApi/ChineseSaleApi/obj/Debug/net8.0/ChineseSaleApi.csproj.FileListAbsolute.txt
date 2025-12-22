@@ -169,3 +169,4 @@ C:\Users\User\Documents\דבורי\לימודים\יד\Project_Angular-Api\Chine
 C:\Users\User\Documents\דבורי\לימודים\יד\Project_Angular-Api\ChineseSaleApi\ChineseSaleApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\User\Documents\דבורי\לימודים\יד\Project_Angular-Api\ChineseSaleApi\ChineseSaleApi\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\User\Documents\דבורי\לימודים\יד\Project_Angular-Api\ChineseSaleApi\ChineseSaleApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\User\Documents\דבורי\לימודים\יד\Project_Angular-Api\ChineseSaleApi\ChineseSaleApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

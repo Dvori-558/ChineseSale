@@ -1,6 +1,56 @@
-﻿    namespace ChineseSaleApi.Services
+﻿using ChineseSaleApi.Dtos;
+using ChineseSaleApi.Models;
+using ChineseSaleApi.RepositoryInterfaces;
+using ChineseSaleApi.ServiceInterfaces;
+using static ChineseSaleApi.Dtos.CreateForUserAddressDto;
+
+namespace ChineseSaleApi.Services
 {
-    public class AddressService
+    public class AddressService : IAddressService
     {
+        private readonly IAddressRepository _addressRepository;
+
+        public AddressService(IAddressRepository addressRepository)
+        {
+            _addressRepository = addressRepository;
+        }
+        //create
+        public async Task AddForUserAddress(CreateForUserAddressDto address)
+        {
+            Address address1 = new Address();
+            address1.Street = address.Street;
+            address1.City = address.City;
+            address1.Number = address.Number;
+            address1.ZipCode = address.ZipCode;
+            await _addressRepository.AddForUserAddress(address1);
+        }
+        public async Task AddForDonorAddress(CreateForDonorAddressDto address)
+        {
+            Address address1 = new Address();
+            address1.Street = address.Street;
+            address1.City = address.City;
+            address1.Number = address.Number;
+            address1.ZipCode = address.ZipCode;
+            await _addressRepository.AddForDonorAddress(address1);
+        }
+        //read
+        public async Task<AddressDto?> GetAddressById(int id)
+        {
+            var address = await _addressRepository.GetAddressById(id);
+            if (address == null)
+            {
+                return null;
+            }
+            return new AddressDto
+            {
+                Id = address.Id,
+                Street = address.Street,
+                City = address.City,
+                Number = address.Number,
+                ZipCode = address.ZipCode
+            };
+        }
+        //update
+        //delete
     }
 }
