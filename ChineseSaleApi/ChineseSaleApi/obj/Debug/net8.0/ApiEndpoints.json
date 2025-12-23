@@ -1,6 +1,22 @@
 [
   {
-    "ContainingType": "ChineseSaleApi.Controllers.AddressController",
+    "ContainingType": "ChineseSaleApi.AddressController",
+    "Method": "UpdateAddress",
+    "RelativePath": "api/Address",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addressDto",
+        "Type": "ChineseSaleApi.Dtos.AddressDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChineseSaleApi.AddressController",
     "Method": "GetAddress",
     "RelativePath": "api/Address/{id}",
     "HttpMethod": "GET",
@@ -16,7 +32,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ChineseSaleApi.Controllers.AddressController",
+    "ContainingType": "ChineseSaleApi.AddressController",
     "Method": "AddForDonorAddress",
     "RelativePath": "api/Address/donor",
     "HttpMethod": "POST",
@@ -25,14 +41,14 @@
     "Parameters": [
       {
         "Name": "address",
-        "Type": "ChineseSaleApi.Dtos.CreateForUserAddressDto\u002BCreateForDonorAddressDto",
+        "Type": "ChineseSaleApi.Dtos.CreateForDonorAddressDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ChineseSaleApi.Controllers.AddressController",
+    "ContainingType": "ChineseSaleApi.AddressController",
     "Method": "AddForUserAddress",
     "RelativePath": "api/Address/user",
     "HttpMethod": "POST",
@@ -94,6 +110,128 @@
     "Method": "DeleteCategory",
     "RelativePath": "api/Category/{id}",
     "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChineseSaleApi.Controllers.LotteryController",
+    "Method": "GetAllLotteries",
+    "RelativePath": "api/Lottery",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChineseSaleApi.Controllers.LotteryController",
+    "Method": "AddLottery",
+    "RelativePath": "api/Lottery",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lottery",
+        "Type": "ChineseSaleApi.Dtos.CreateLotteryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChineseSaleApi.Controllers.LotteryController",
+    "Method": "UpdateLottery",
+    "RelativePath": "api/Lottery",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lottery",
+        "Type": "ChineseSaleApi.Dtos.LotteryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChineseSaleApi.Controllers.LotteryController",
+    "Method": "GetLotteryById",
+    "RelativePath": "api/Lottery/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChineseSaleApi.Controllers.LotteryController",
+    "Method": "DeleteLottery",
+    "RelativePath": "api/Lottery/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChineseSaleApi.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "ChineseSaleApi.Dtos.CreateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChineseSaleApi.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "ChineseSaleApi.Dtos.UpdateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChineseSaleApi.Controllers.UserController",
+    "Method": "GetUser",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [

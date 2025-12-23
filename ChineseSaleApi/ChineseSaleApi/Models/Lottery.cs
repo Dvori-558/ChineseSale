@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ChineseSaleApi.Validations;
+using System.ComponentModel.DataAnnotations;
 
 namespace ChineseSaleApi.Models
 {
@@ -10,6 +11,7 @@ namespace ChineseSaleApi.Models
         [MaxLength(50)]
         public string Name { get; set; }
         [Required]
+        [DateValidation]
         public DateTime StartDate { get; set; }
         [Required]
         public DateTime EndDate { get; set; }

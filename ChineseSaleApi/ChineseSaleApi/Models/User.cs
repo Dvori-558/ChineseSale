@@ -25,7 +25,7 @@ namespace ChineseSaleApi.Models
 
         public bool IsAdmin { get; set; } = false;
 
-        public int? AddressId { get; set; }
+        public int AddressId { get; set; }
         public Address? Address { get; set; }
 
         public ICollection<CardCart> CardCarts { get; set; } = new List<CardCart>();

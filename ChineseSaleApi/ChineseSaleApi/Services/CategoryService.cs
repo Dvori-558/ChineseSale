@@ -36,7 +36,7 @@ namespace ChineseSaleApi.Services
                 Name = category.Name
             };
         }
-        public async Task<IEnumerable<CategoryDto>> GetAllCategories()
+        public async Task<List<CategoryDto>> GetAllCategories()
         {
             var categories = await _categoryRepository.GetAllCategories();
             return categories.Select(c => new CategoryDto

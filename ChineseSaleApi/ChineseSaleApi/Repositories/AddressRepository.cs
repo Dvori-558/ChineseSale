@@ -13,15 +13,17 @@ namespace ChineseSaleApi.Repositories
             _context = storeContext;
         }
         //create
-        public async Task AddForDonorAddress(Address address)
+        public async Task<int> AddForDonorAddress(Address address)
         {
-            await _context.Addresses.AddAsync(address);
+            _context.Addresses.Add(address);
             await _context.SaveChangesAsync();
+            return address.Id;
         }
-        public async Task AddForUserAddress(Address address)
+        public async Task<int> AddForUserAddress(Address address)
         {
-            await _context.Addresses.AddAsync(address);
+            _context.Addresses.Add(address);
             await _context.SaveChangesAsync();
+            return address.Id;
         }
         //read
         public async Task<Address?> GetAddressById(int id)

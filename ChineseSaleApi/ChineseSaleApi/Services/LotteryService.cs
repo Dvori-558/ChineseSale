@@ -24,10 +24,6 @@ namespace ChineseSaleApi.Services
             {
                 throw new ArgumentException("Lottery end date must be after start date.");
             }
-            if (lotteryDto.StartDate <= DateTime.Now)
-            {
-                throw new ArgumentException("Lottery start date must be in the future.");
-            }
             List<LotteryDto> lotteries = await GetAllLotteries();
             var prevLottery = lotteries.OrderByDescending(l => l.Id).First();
             if (prevLottery != null && prevLottery.EndDate >= lotteryDto.StartDate)
@@ -82,11 +78,6 @@ namespace ChineseSaleApi.Services
             {
                 throw new ArgumentException("Lottery end date must be after start date.");
             }
-            if (lotteryDto.StartDate <= DateTime.Now)
-            {
-                throw new ArgumentException("Lottery start date must be in the future.");
-            }
-
             var lottery = await _repository.GetLotteryById(lotteryDto.Id);
             if (lottery == null)
             {

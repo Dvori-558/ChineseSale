@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net.Sockets;
 using static ChineseSaleApi.Dtos.CreateForUserAddressDto;
 
-namespace ChineseSaleApi.Controllers
+namespace ChineseSaleApi
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -31,15 +31,22 @@ namespace ChineseSaleApi.Controllers
         [Route("user")]
         public async Task<IActionResult> AddForUserAddress([FromBody] CreateForUserAddressDto address)
         {
-            await _service.AddForUserAddress(address);
-            return CreatedAtAction(nameof(GetAddress), new { id = address }, address);
+            int id= await _service.AddForUserAddress(address);
+            return CreatedAtAction(nameof(GetAddress), new { Id =  id}, address);
         }
         [HttpPost]
         [Route("donor")]
         public async Task<IActionResult> AddForDonorAddress([FromBody] CreateForDonorAddressDto address)
         {
-            await _service.AddForDonorAddress(address);
-            return CreatedAtAction(nameof(GetAddress), new { id = address }, address);
+            int id = await _service.AddForDonorAddress(address);
+            return CreatedAtAction(nameof(GetAddress), new { Id = id }, address);
+        }
+        //update
+        [HttpPut]
+        public async Task<IActionResult> UpdateAddress([FromBody] AddressDto addressDto)
+        {
+            await _service.UpdateAddress(addressDto);
+            return NoContent();
         }
     }
 }

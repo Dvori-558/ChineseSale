@@ -14,7 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ChineseSaleApi.Data.ChineseSaleContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SeminarConnection")));
 
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();
 builder.Services.AddScoped<IDonorRepository, DonorRepository>();
@@ -25,10 +25,13 @@ builder.Services.AddScoped<IGiftRepository, GiftRepository>();
 builder.Services.AddScoped<IPackageCartRepository, PackageCartRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IpackageRepository, packageRepository>();
+builder.Services.AddScoped<ILotteryRepository, LotteryRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddScoped<IAddressService, AddressService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ILotteryService, LotteryService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.

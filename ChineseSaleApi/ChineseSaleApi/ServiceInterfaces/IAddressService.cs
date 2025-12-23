@@ -5,9 +5,10 @@ namespace ChineseSaleApi.ServiceInterfaces
 {
     public interface IAddressService
     {
-        Task AddForUserAddress(CreateForUserAddressDto address);
-        Task AddForDonorAddress(CreateForDonorAddressDto address);
+        Task<int> AddForUserAddress(CreateForUserAddressDto address);
+        Task<int> AddForDonorAddress(CreateForDonorAddressDto address);
 
         Task<AddressDto?> GetAddressById(int id);
+        Task UpdateAddress(AddressDto addressDto);
     }
 }

@@ -15,23 +15,28 @@ namespace ChineseSaleApi.Services
             _addressRepository = addressRepository;
         }
         //create
-        public async Task AddForUserAddress(CreateForUserAddressDto address)
+        public async Task<int> AddForUserAddress(CreateForUserAddressDto address)
         {
-            Address address1 = new Address();
-            address1.Street = address.Street;
-            address1.City = address.City;
-            address1.Number = address.Number;
-            address1.ZipCode = address.ZipCode;
-            await _addressRepository.AddForUserAddress(address1);
+            Address address1 = new Address()
+            {
+                Street = address.Street,
+                City = address.City,
+                Number = address.Number,
+                ZipCode = address.ZipCode
+            };
+            return await _addressRepository.AddForUserAddress(address1);
+           
         }
-        public async Task AddForDonorAddress(CreateForDonorAddressDto address)
+        public async Task<int> AddForDonorAddress(CreateForDonorAddressDto address)
         {
-            Address address1 = new Address();
-            address1.Street = address.Street;
-            address1.City = address.City;
-            address1.Number = address.Number;
-            address1.ZipCode = address.ZipCode;
-            await _addressRepository.AddForDonorAddress(address1);
+            Address address1 = new Address()
+            {
+                Street = address.Street,
+                City = address.City,
+                Number = address.Number,
+                ZipCode = address.ZipCode
+            };
+            return await _addressRepository.AddForDonorAddress(address1);
         }
         //read
         public async Task<AddressDto?> GetAddressById(int id)
@@ -51,6 +56,18 @@ namespace ChineseSaleApi.Services
             };
         }
         //update
+        public async Task UpdateAddress(AddressDto addressDto)
+        {
+            var address = await _addressRepository.GetAddressById(addressDto.Id);
+            if (address != null)
+            {
+                address.Street = addressDto.Street;
+                address.City = addressDto.City;
+                address.Number = addressDto.Number;
+                address.ZipCode = addressDto.ZipCode;
+                await _addressRepository.UpdateAddress(address);
+            }
+        }
         //delete
     }
 }
