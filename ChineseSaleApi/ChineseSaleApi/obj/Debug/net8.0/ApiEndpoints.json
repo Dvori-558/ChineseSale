@@ -64,6 +64,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ChineseSaleApi.Controllers.CardController",
+    "Method": "GetAllCards",
+    "RelativePath": "api/Card",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChineseSaleApi.Controllers.CardController",
+    "Method": "GetCardById",
+    "RelativePath": "api/Card/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ChineseSaleApi.Controllers.CategoryController",
     "Method": "GetAllCategories",
     "RelativePath": "api/Category",

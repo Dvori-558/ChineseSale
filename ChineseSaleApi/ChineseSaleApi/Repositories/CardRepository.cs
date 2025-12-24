@@ -1,7 +1,7 @@
 using ChineseSaleApi.Data;
 using ChineseSaleApi.Models;
 using ChineseSaleApi.RepositoryInterfaces;
-
+using Microsoft.EntityFrameworkCore;
 namespace ChineseSaleApi.Repositories
 {
     public class CardRepository : ICardRepository
@@ -12,15 +12,23 @@ namespace ChineseSaleApi.Repositories
             _context = storeContext;
         }
         //create
-        public async Task AddCard(Card card)
+        public async Task<int> AddCard(Card card)
         {
-            await _context.Cards.AddAsync(card);
+            _context.Cards.Add(card);
             await _context.SaveChangesAsync();
+            return card.Id;
         }
         //read
-        public async Task<Card?> GetCard(int id)
+        public async Task<IEnumerable<Card?>> GetCardById(int id)
         {
-            return await _context.Cards.FindAsync(id);
+            return await _context.Cards.Include(g=>g.Gift)
+                .Include(u=>u.User).Where(c => c.GiftId == id)
+                .ToListAsync();
+        }
+        public async Task<IEnumerable<Card>> GetAllCards()
+        {
+            return await _context.Cards.Include(g=>g.Gift)
+                .ToListAsync();
         }
         //update
         public async Task UpdateCard(Card card)

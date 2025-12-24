@@ -4,8 +4,10 @@ namespace ChineseSaleApi.RepositoryInterfaces
 {
     public interface ICardRepository
     {
-        Task AddCard(Card card);
-        Task<Card?> GetCard(int id);
+        Task<int> AddCard(Card card);
+        Task<IEnumerable<Card?>> GetCardById(int id);
+        Task<IEnumerable<Card>> GetAllCards();
+
         Task UpdateCard(Card card);
     }
 }
